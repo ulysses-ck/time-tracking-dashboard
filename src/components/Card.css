@@ -1,0 +1,123 @@
+.card-background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+
+	padding: 0 5px 0 0;
+
+	z-index: 0;
+	border-radius: 15px;
+}
+
+.card-background > svg {
+	position: relative;
+	object-fit: cover;
+	bottom: 15px;
+}
+
+.card-body {
+	position: absolute;
+	top: 2.5rem;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	padding: 0.9rem;
+	line-height: 5px;
+
+	z-index: 1;
+	background-color: var(--neutral-dark-blue);
+	border-radius: 15px;
+}
+
+.card-container {
+	display: flex;
+	position: relative;
+
+	width: 100%;
+	height: 100%;
+
+	flex-direction: column;
+}
+
+.card-title {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.card-current {
+	display: flex;
+	justify-content: space-between;
+	text-align: center;
+	align-items: center;
+	line-height: 25px;
+}
+
+p.current-time-activity {
+	font-size: 2rem;
+	font-weight: 300;
+	margin: 20px 0 0 0;
+	color: var(--neutral-pale-blue);
+}
+p.previous-time-activity {
+	font-weight: 300;
+	color: var(--neutral-desaturated-blue);
+	margin: 20px 0 0 0;
+}
+
+.card-body:hover {
+	background-color: hsl(236, 41%, 34%);
+}
+.bg-work {
+	background-image: url(/public/icon-work.svg);
+	background-color: var(--primary-light-red-work);
+}
+
+.bg-study {
+	background-image: url(/public/icon-study.svg);
+	background-color: var(--primary-light-red-study);
+}
+
+.bg-self-care {
+	background-image: url(/public/icon-self-care.svg);
+	background-color: var(--primary-soft-orange);
+}
+
+.bg-play {
+	background-image: url(/public/icon-play.svg);
+	background-color: var(--primary-soft-blue);
+}
+
+.bg-social {
+	background-image: url(/public/icon-social.svg);
+	background-color: var(--primary-violet);
+}
+
+.bg-exercise {
+	background-image: url(/public/icon-exercise.svg);
+	background-color: var(--primary-lime-green);
+}
+
+.bg-offset {
+	background-position: top -15px right 10px;
+	background-repeat: no-repeat;
+}
+
+@media (min-width: 1270px) {
+	.card-current {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	p.current-time-activity {
+		font-size: 2.5rem;
+		font-weight: 300;
+	}
+
+	p.previous-time-activity {
+		font-weight: 400;
+	}
+}

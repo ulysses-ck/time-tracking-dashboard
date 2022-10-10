@@ -1,0 +1,11 @@
+input[type="radio"] {
+	display: none;
+}
+
+label {
+	cursor: pointer;
+}
+
+input[type="radio"]:checked + label {
+	color: var(--neutral-pale-blue);
+}

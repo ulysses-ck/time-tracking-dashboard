@@ -1,0 +1,7 @@
+.icon {
+	fill: var(--neutral-desaturated-blue);
+}
+
+.icon:hover {
+	fill: var(--neutral-pale-blue);
+}

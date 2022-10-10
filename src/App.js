@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { createContext, useState } from "react";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import Container from "./components/Container";
+
+export const Timeframe = createContext({
+	timeframe: "",
+	setTimeframe: () => {},
+});
+
+const App = () => {
+	const [sTimeframe, setSTimeframe] = useState({
+		timeframe: "Weekly",
+		setTimeframe: (tr) => {
+			setSTimeframe((prevState) => ({ ...prevState, timeframe: tr }));
+		},
+	});
+
+	return (
+		<div className="App">
+			<Timeframe.Provider value={sTimeframe}>
+				<Container></Container>
+			</Timeframe.Provider>
+		</div>
+	);
+};
 
 export default App;
